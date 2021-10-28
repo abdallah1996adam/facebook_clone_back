@@ -1,0 +1,30 @@
+{
+  "name": "facebook_clone_back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "watch": "nodemon run ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdallah1996adam/facebook_clone_back.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdallah1996adam/facebook_clone_back/issues"
+  },
+  "homepage": "https://github.com/abdallah1996adam/facebook_clone_back#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.14"
+  }
+}
