@@ -1,31 +1,30 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
-const UserSchema = new mongoose.Schema(
+const userSchema = new mongoose.Schema(
   {
-    username: {
+    userName: {
       type: String,
       required: true,
-      min: 3,
-      max: 30,
       unique: true,
+      min: 3,
+      max: 25,
     },
     email: {
       type: String,
-      required: true,
-      min: 5,
-      max: 50,
       unique: true,
+      required: true,
+      max: 50,
     },
     password: {
       type: String,
       required: true,
-      min: 8,
+      min: 6,
     },
-    profilePic: {
+    profilePicture: {
       type: String,
       default: "",
     },
-    coverPic: {
+    coverPicture: {
       type: String,
       default: "",
     },
@@ -33,7 +32,7 @@ const UserSchema = new mongoose.Schema(
       type: Array,
       default: [],
     },
-    followig: {
+    following: {
       type: Array,
       default: [],
     },
@@ -45,4 +44,7 @@ const UserSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("User", UserSchema);
+
+const UserModel = mongoose.model("User", userSchema)
+
+export default UserModel
